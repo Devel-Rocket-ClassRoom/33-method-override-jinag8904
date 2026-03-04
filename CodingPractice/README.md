@@ -11,7 +11,9 @@
 
 ### 1-1. 기본 사용법
 
-`Parent` 클래스에 `virtual` 메서드 `Work()`를 정의하고 "프로그래머"를 출력하세요. `Child` 클래스가 `Parent`를 상속받아 `Work()`를 `override`하여 "프로게이머"를 출력합니다. 각 인스턴스의 `Work()`를 호출하세요.
+`Parent` 클래스에 `virtual` 메서드 `Work()`를 정의하고 "프로그래머"를 출력하세요. 
+`Child` 클래스가 `Parent`를 상속받아 `Work()`를 `override`하여 "프로게이머"를 출력합니다. 
+각 인스턴스의 `Work()`를 호출하세요.
 
 **실행 결과**
 
@@ -22,7 +24,10 @@
 
 ### 1-2. 다형성과 오버라이드
 
-`Animal` 클래스에 `virtual` 메서드 `Eat()`을 정의하고, `Cat` 클래스가 이를 `override`하세요. `Animal` 타입 변수에 `Cat` 인스턴스를 할당하고 `Eat()`을 호출하여, 부모 타입 변수에서도 자식의 재정의된 메서드가 호출됨을 확인합니다.
+`Animal` 클래스에 `virtual` 메서드 `Eat()`을 정의하고, 
+`Cat` 클래스가 이를 `override`하세요. 
+`Animal` 타입 변수에 `Cat` 인스턴스를 할당하고 `Eat()`을 호출하여, 
+부모 타입 변수에서도 자식의 재정의된 메서드가 호출됨을 확인합니다.
 
 **실행 결과**
 
@@ -35,7 +40,10 @@ Cat Eat
 
 ## 2. new vs override 동작 비교
 
-`Parent` 클래스에 `Say()`, `Run()`, `virtual Walk()` 메서드를 정의하세요. `Child` 클래스에서 `Say()`와 `Run()`은 `new`로 숨기고, `Walk()`는 `override`로 재정의합니다. `Child` 타입과 `Parent` 타입 변수로 각각 호출하여 동작 차이를 확인하세요.
+`Parent` 클래스에 `Say()`, `Run()`, `virtual Walk()` 메서드를 정의하세요. 
+`Child` 클래스에서 `Say()`와 `Run()`은 `new`로 숨기고, 
+`Walk()`는 `override`로 재정의합니다. 
+`Child` 타입과 `Parent` 타입 변수로 각각 호출하여 동작 차이를 확인하세요.
 
 **실행 결과**
 
@@ -55,7 +63,8 @@ Cat Eat
 
 ### 3-1. 오버로드
 
-`Calculator` 클래스에 `Add()` 메서드를 세 가지 매개변수 조합으로 오버로드하세요: `(int, int)`, `(double, double)`, `(int, int, int)`. 각각 호출하여 결과를 출력합니다.
+`Calculator` 클래스에 `Add()` 메서드를 세 가지 매개변수 조합으로 오버로드하세요: 
+`(int, int)`, `(double, double)`, `(int, int, int)`. 각각 호출하여 결과를 출력합니다.
 
 **실행 결과**
 
@@ -67,7 +76,9 @@ Cat Eat
 
 ### 3-2. 오버라이드
 
-`Animal` 클래스에 `virtual` 메서드 `Speak()`을 정의하세요. `Dog`와 `Cat` 클래스가 각각 `override`하여 고유한 소리를 출력합니다. `Animal` 타입 변수에 각 인스턴스를 담아 호출하세요.
+`Animal` 클래스에 `virtual` 메서드 `Speak()`을 정의하세요. 
+`Dog`와 `Cat` 클래스가 각각 `override`하여 고유한 소리를 출력합니다. 
+`Animal` 타입 변수에 각 인스턴스를 담아 호출하세요.
 
 **실행 결과**
 
@@ -83,7 +94,9 @@ Cat Eat
 
 ### 4-1. base 키워드 기본
 
-`Parent` 클래스에 `virtual` 메서드 `Greet()`를 정의하고, `Child` 클래스에서 `override`하여 `base.Greet()`로 부모 메서드를 먼저 호출한 후 추가 메시지를 출력하세요.
+`Parent` 클래스에 `virtual` 메서드 `Greet()`를 정의하고, 
+`Child` 클래스에서 `override`하여 `base.Greet()`로 부모 메서드를 먼저 호출한 후 
+추가 메시지를 출력하세요.
 
 **실행 결과**
 
@@ -94,7 +107,10 @@ Cat Eat
 
 ### 4-2. base 키워드 활용
 
-`Parent`, `Child`, `GrandChild` 세 단계의 상속 구조를 만드세요. `Parent`에 `virtual Work()`를 정의하고, `Child`는 `base.Work()`로 부모 메서드를 그대로 호출하며, `GrandChild`는 새로운 동작을 수행합니다.
+`Parent`, `Child`, `GrandChild` 세 단계의 상속 구조를 만드세요. 
+`Parent`에 `virtual Work()`를 정의하고, 
+`Child`는 `base.Work()`로 부모 메서드를 그대로 호출하며, 
+`GrandChild`는 새로운 동작을 수행합니다.
 
 **실행 결과**
 
@@ -108,7 +124,10 @@ Cat Eat
 
 ## 5. 메서드 오버라이드 봉인 (sealed)
 
-`Parent` 클래스에 `virtual Work()`를 정의하고, `Child` 클래스에서 `sealed override`로 봉인하세요. `GrandChild` 클래스에서는 `Work()`를 재정의할 수 없으므로 별도의 `Play()` 메서드를 추가합니다. 각 인스턴스를 생성하여 메서드를 호출하세요.
+`Parent` 클래스에 `virtual Work()`를 정의하고, 
+`Child` 클래스에서 `sealed override`로 봉인하세요. 
+`GrandChild` 클래스에서는 `Work()`를 재정의할 수 없으므로 
+별도의 `Play()` 메서드를 추가합니다. 각 인스턴스를 생성하여 메서드를 호출하세요.
 
 **실행 결과**
 
@@ -125,7 +144,9 @@ Cat Eat
 
 ### 6-1. 기본 동작 확인
 
-`Person` 클래스에 `Name` 필드를 정의하고, `ToString()`을 오버라이드하지 않은 채 `Console.WriteLine()`에 인스턴스를 전달하세요. 기본적으로 클래스 이름이 출력됨을 확인합니다.
+`Person` 클래스에 `Name` 필드를 정의하고, 
+`ToString()`을 오버라이드하지 않은 채 `Console.WriteLine()`에 인스턴스를 전달하세요. 
+기본적으로 클래스 이름이 출력됨을 확인합니다.
 
 **실행 결과**
 
@@ -136,7 +157,8 @@ Person
 
 ### 6-2. ToString() 오버라이드
 
-`Person` 클래스에 생성자와 `ToString()` 오버라이드를 구현하여 `"[Person 클래스: 이름]"` 형식으로 반환하세요.
+`Person` 클래스에 생성자와 `ToString()` 오버라이드를 구현하여 
+`"[Person 클래스: 이름]"` 형식으로 반환하세요.
 
 **실행 결과**
 
@@ -146,7 +168,9 @@ Person
 
 ### 6-3. 게임 캐릭터 예제
 
-`Character` 클래스에 `Name`, `Level`, `Health` 필드와 생성자를 정의하고, `ToString()`을 오버라이드하여 `"[이름] Lv.레벨 HP:체력"` 형식으로 반환하세요. 두 캐릭터를 생성하여 출력합니다.
+`Character` 클래스에 `Name`, `Level`, `Health` 필드와 생성자를 정의하고, 
+`ToString()`을 오버라이드하여 `"[이름] Lv.레벨 HP:체력"` 형식으로 반환하세요. 
+두 캐릭터를 생성하여 출력합니다.
 
 **실행 결과**
 
@@ -161,7 +185,10 @@ Person
 
 ### 7-1. RPG 캐릭터 시스템
 
-`Character` 클래스에 `Name`, `AttackPower` 필드와 `virtual Attack()`, `ToString()` 오버라이드를 구현하세요. `Warrior`, `Mage`, `Archer` 클래스가 `Character`를 상속받아 각각의 공격 방식을 `override`합니다. 정보 출력과 공격을 실행하세요.
+`Character` 클래스에 `Name`, `AttackPower` 필드와 
+`virtual Attack()`, `ToString()` 오버라이드를 구현하세요. 
+`Warrior`, `Mage`, `Archer` 클래스가 `Character`를 상속받아 
+각각의 공격 방식을 `override`합니다. 정보 출력과 공격을 실행하세요.
 
 **실행 결과**
 
@@ -177,7 +204,9 @@ Person
 
 ### 7-2. 다형성 활용
 
-7-1의 클래스를 그대로 사용합니다. `Character[]` 배열에 전사, 마법사, 궁수를 담고 `foreach`로 순회하며 `Attack()`을 호출하세요.
+7-1의 클래스를 그대로 사용합니다. 
+`Character[]` 배열에 전사, 마법사, 궁수를 담고 `foreach`로 순회하며 
+`Attack()`을 호출하세요.
 
 **실행 결과**
 

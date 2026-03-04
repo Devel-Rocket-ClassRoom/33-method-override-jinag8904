@@ -1,4 +1,9 @@
 using System;
 
-// README.md를 읽고 코드를 작성하세요.
-Console.WriteLine("코드를 작성하세요.");
+Instrument[] instruments = { new Piano(), new Guitar(), new Drum() };
+
+foreach (Instrument instr in instruments)
+{
+    instr.Tune();
+    instr.Play();
+}
